@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!--  MY STYLE  -->
+	<link rel="stylesheet" type="text/css" href="my_style.css">
+	<!--  BOOTSTRAP  -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!--  GOOGLE FONTS  -->
+	<link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600" rel="stylesheet">
+	<!--  FONTS AWESOME ICONS -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!--  JQUERY  -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+	</script>
+	<!--  JQUERY UI  -->
+	<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous">
+	</script>
+	<!--  FIRE BASE  -->
+	<script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js">
+	</script>
+</head>
+
+<body>
+	<div class="my_containner">
+		<div class="header">
+			<!--
+               <i class="phone_menu fa fa-bars fa-2x" aria-hidden="true"></i>
+             -->
+			<!-- <div id="menu"> MENY </div>  -->
+			<div id="icon_box">
+				<div id="line_1"> </div>
+				<div id="line_2"> </div>
+				<div id="line_3"> </div>
+			</div>
+			<!-- ======== DESKTOP MENU  ======== -->
+			<ul class="desktop_menu">
+				<li class="desktop selected" value="0"> Vägmärken </li>
+				<li class="desktop unselect" value="1"> Säkerhet </li>
+				<li class="desktop unselect" value="2"> Miljö och hälsa </li>
+				<li class="desktop unselect" value="3"> Fordon </li>
+			</ul>
+			<div class="your_info">
+				<div id="scorediv" class="hide_signout"><span> DIN HÖGSTA POÄNG : </span><span id="score"> </span> </div> <span id="welcome" class="hide_signout">  <span id="username"></span></span>
+			</div>
+			<div id="login"><i class="fa fa-user fa-2x text-center"></i> LOGGA IN </div>
+			<div id="signout" class="hide_signout"><i class="fa fa-sign-in fa-1x hide_signout"></i> LOGGA UT </div>
+			<!-- ======== PHONE MENU  ======== -->
+			<ul class="phone_menu hide">
+				<li class="phone selected" value="0"> Vägmärken </li>
+				<li class="phone unselect" value="1"> Säkerhet </li>
+				<li class="phone unselect" value="2"> Miljö och hälsa </li>
+				<li class="phone unselect" value="3"> Fordon </li>
+			</ul>
+		</div>
+		<!-- ======== LOGG IN POP UP  ======== -->
+		<div id="login_popup" class="hide">
+			<div id="login_inner_containner"> <i class="closeicon fa fa-times fa-1x text-center"></i> <i class="usericon fa fa-user fa-1x text-center"></i>
+				<input id="inputemail" class="hideerror" type="email" name="username" placeholder="Email" required> <i class="passwordicon fa fa-lock fa-1x text-center"></i>
+				<input id="inputpassword" class="hideerror" type="password" name="password" placeholder="Password" required>
+				<button id="loginsubmit"> LOGGA IN </button>
+				<button id="signinsubmit"> REGISTRERA </button>
+				<div class="errortext" class="hide"> </div>
+			</div>
+		</div>
+		<!-- ======== QUESTION SECTION  ======== -->
+		<div class="question_status_row"> <span id="test_status">  </span> <span id="time_countdown"> </span> </div>
+		<div class="question_containner">
+			<div class="question_body">
+				<div id="language_choices"> <img id="se" src="http://rattana.se/korkort_test/css/flags/sv.png" class="flag thisflag flag-se" alt="Svenska" /> <img id="th" src="http://rattana.se/korkort_test/css/flags/th.png" class="flag unflag flag-th" alt="Thailandska" /> </div>
+				<!-- ======== QUESTIONS FROM DATABASE ======== -->
+				<div id="test"> </div>
+			</div>
+			<section class="correct_answer"> </section>
+			<!-- ========  FOOTER  ======== -->
+			<footer>
+				<button class="next"> NÄSTA </button>
+			</footer>
+		</div>
+<script src="my_javascript.js"></script>
+</body>
+
+</html>

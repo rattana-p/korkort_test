@@ -1,0 +1,571 @@
+$d_blue: rgb(0, 139, 158);
+$l_blue: rgb(89, 187, 192);
+$d_orange: rgb(234, 107, 51);
+$l_orange: rgb(248, 167, 132);
+$lightgreen: rgb(101, 198, 173);
+$lightgreen2: rgba(101, 198, 173, 0.3);
+$lightgray: rgba(78, 78, 78, 0.5);
+$lightblack: rgba(65, 65, 65, 0.8);
+@import "tablet";
+@import "phone";
+@media screen and (min-width: 971px) and (max-width: 3200px) {
+	body {
+		overflow: hidden;
+	}
+	.my_containner {
+		margin: 0px;
+		min-height: calc(100vh - 10px);
+	}
+	.header {
+		background-color: $lightgreen;
+		width: 100vw;
+		height: 100px;
+		padding: 25px 5% 0px 5%;
+		border-bottom: 3px solid $lightblack;
+		margin: 0px auto;
+		justify-content: flex-end;
+		position: fixed !important;
+		z-index: 55;
+		#logo {
+			width: 80px;
+			height: 80px;
+			background-color: coral;
+			border-radius: 50%;
+			color: white;
+			font-size: 35px;
+			font-weight: 500px;
+			line-height: 82px;
+			margin-top: -15px;
+			text-align: center;
+		}
+		#icon_box,
+		#line_1,
+		#line_2,
+		#line_3 {
+			display: none;
+		}
+		.desktop_menu {
+			width: 600px !important;
+			height: 35px;
+			display: block;
+			top: 42px;
+			left: 10px;
+			margin: 0px auto;
+			position: relative;
+			float: left;
+			li.desktop {
+				justify-content: center;
+				position: relative;
+				list-style-type: none;
+				text-transform: uppercase;
+				background-color: floralwhite;
+				height: 33px;
+				width: 132px;
+				padding: 9px 0px 0px 0px;
+				top: 0px;
+				right: 20px;
+				color: black;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				font-size: 11px;
+				font-weight: 400;
+				display: inline-flex;
+				letter-spacing: 1px;
+				border-bottom: 3px solid $lightblack;
+				&:hover {
+					transform: translateY(5px);
+					border-bottom: 3px solid coral !important;
+					background-color: coral;
+					transition: 0.7s;
+					cursor: pointer;
+				}
+			}
+		}
+		#signout {
+			width: 120px;
+			margin-top: 42px !important;
+			margin-right: 20px !important;
+			height: 36px !important;
+			position: absolute;
+			text-align: center !important;
+			padding: 2px 0px 0px 4px;
+			color: white;
+			font-size: 13px;
+			font-weight: 300;
+			letter-spacing: 1px !important;
+			border-bottom: 3px solid $lightblack;
+			i {
+				white-space: nowrap !important;
+				font-size: 20px !important;
+				font-weight: 300;
+			}
+			&:hover {
+				background-color: coral !important;
+				cursor: pointer;
+				color: white !important;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				border-bottom: 3px solid $lightblack;
+			}
+		}
+		.hide_signout {
+			display: none !important;
+		}
+		.show_signout {
+			display: inline-block !important;
+		}
+		#login {
+			height: 33px;
+			text-transform: uppercase;
+			text-align: center !important;
+			padding: 3px 0px 0px 5px;
+			color: white;
+			font-size: 13px;
+			font-weight: 300;
+			letter-spacing: 1px !important;
+			float: right;
+			margin-top: 45px !important;
+			margin-right: 20px !important;
+			z-index: 10 !important;
+			border-bottom: 3px solid $lightblack !important;
+			i {
+				font-size: 20px !important;
+				font-weight: 300;
+			}
+			&:hover {
+				background-color: coral !important;
+				cursor: pointer;
+				color: white !important;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				border-bottom: 3px solid $lightblack;
+			}
+		}
+		.your_info {
+			position: absolute;
+			display: inline-flex;
+			background-color: transparent;
+			width: 30%;
+			height: 75px;
+			margin-top: 0px !important;
+			right: 20px;
+			padding: 5px 10px;
+			color: white;
+			letter-spacing: 1px;
+			float: right !important;
+			z-index: 0;
+			#scorediv {
+				text-transform: uppercase;
+				text-align: center !important;
+				padding: 3px 0px 0px 5px;
+				color: gre;
+				font-size: 12.5px;
+				font-weight: 300;
+				float: right;
+				letter-spacing: 1px !important;
+				margin-top: 40px !important;
+				margin-right: -150px !important;
+				z-index: 999;
+				width: 200px;
+				display: inline-flex;
+			}
+			#score {
+				color: coral;
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+				background-color: $lightblack;
+				font-size: 16.55px;
+				text-shadow: 1px 1px 1px black;
+			}
+			#welcome {
+				background-color: rebeccapurple !important;
+				position: relative;
+				right: 5px;
+				font-size: 16px;
+				margin: auto;
+				#username {
+					float: none;
+					margin-top: -80px !important;
+					margin-right: 50px !important;
+					left: -70px !important;
+					text-transform: lowercase;
+					position: absolute !important;
+					text-align: left !important;
+					padding: 3px 0px 0px 5px;
+					color: white !important;
+					font-size: 15px !important;
+					font-weight: 300;
+					letter-spacing: 1.85px !important;
+					z-index: 999;
+					width: 170px;
+					height: 30px;
+					line-height: 34px;
+					display: block;
+				}
+			}
+		}
+	}
+	.selected {
+		border-bottom: 5px solid coral !important;
+		color: white !important;
+		transform: translateY(3px);
+		background-color: coral !important;
+	}
+	.unselect {
+		background-color: $lightgreen;
+	}
+	.your_info {
+		display: none;
+	}
+	.desktop_your_info {
+		letter-spacing: 1px;
+		position: fixed;
+		height: 60px;
+		width: 100% !important;
+		background-color: $lightgray;
+		left: 0px;
+		top: 100px;
+		padding: 15px 0px 0px 50px !important;
+		font-size: 13px;
+		color: white;
+		text-transform: uppercase;
+		font-weight: 300;
+		display: block;
+		text-align: left;
+	}
+	#login_popup {
+		background-color: rgb(101, 198, 173);
+		padding: 50px 50px;
+		width: 100%;
+		height: 100vh !important;
+		position: absolute;
+		top: 0px;
+		margin-left: auto;
+		bottom: 0px;
+		z-index: 55;
+		justify-content: center;
+		#login_inner_containner {
+			background-color: rgb(242, 242, 242);
+			width: 450px;
+			;
+			padding: 30px 0px 10px 0px;
+			margin: 0px auto;
+			.usericon,
+			.passwordicon {
+				height: 45px;
+				z-index: 2;
+				padding: 6px 10px;
+				text-align: center;
+				padding: 15px;
+				color: white;
+				position: relative;
+				background-color: rgb(101, 198, 173);
+			}
+			.usericon {
+				top: -1px;
+				left: 85px;
+			}
+			.passwordicon {
+				top: 93px !important;
+				left: -243px;
+			}
+			.closeicon {
+				color: white;
+				font-size: 17px;
+				font-weight: 400;
+				position: relative;
+				top: -25px;
+				right: 5px;
+				float: right;
+				background-color: rgb(45, 45, 45);
+				padding: 6px 7px;
+			}
+			.closeicon:hover {
+				color: coral !important;
+				cursor: pointer;
+			}
+			input {
+				text-transform: lowercase;
+				width: 270px;
+				height: 45px;
+				border: 0px;
+				outline: none;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				letter-spacing: 2px !important;
+				font-weight: 300;
+				color: rgb(77, 77, 77);
+				padding-left: 20px;
+				position: relative;
+			}
+			#inputemail {
+				margin-left: 12px !important;
+				margin-top: 36px !important;
+			}
+			#inputpassword {
+				margin-left: 55px !important;
+				margin-top: 48px !important;
+			}
+			.showerror {
+				background-color: rgb(240, 77, 83);
+				color: white !important;
+			}
+			.hideerror {
+				background-color: white;
+				color: rgb(77, 77, 77);
+			}
+			#loginsubmit,
+			#signinsubmit {
+				padding: 7px 0px !important;
+				color: white;
+				width: 130px;
+				border: 0px;
+			}
+			#loginsubmit {
+				margin-left: 87px !important;
+				margin-top: 60px !important;
+				background-color: rgb(77, 77, 77);
+			}
+			#loginsubmit:hover,
+			#loginsubmit:focus {
+				background-color: coral !important;
+				color: white;
+				padding: 7px 0px !important;
+			}
+			#signinsubmit {
+				color: rgba(77, 77, 77, 1);
+				background-color: rgba(77, 77, 77, 0.1);
+				margin-left: 45px !important;
+				margin-top: 60px !important;
+			}
+			#signinsubmit:hover,
+			#signinsubmit:focus {
+				background-color: coral !important;
+				color: white;
+				padding: 7px 0px !important;
+			}
+			#inputemail:focus,
+			#inputpassword:focus {
+				outline: none;
+				background-color: coral;
+			}
+			#inputemail::-webkit-input-placeholder,
+			#inputpassword::-webkit-input-placeholder {
+				color: #CCCCCC;
+				background-color: transparent;
+				position: relative;
+				padding-left: 0px;
+				top: 0px !important;
+				-webkit-transition: padding 0.5s;
+				transition: top 0.5s !important;
+			}
+			#inputemail:hover::-webkit-input-placeholder,
+			#inputemail:focus::-webkit-input-placeholder,
+			#inputpassword:hover::-webkit-input-placeholder,
+			#inputpassword:focus::-webkit-input-placeholder,
+			{
+				top: -32px !important;
+				color: rgb(77, 77, 77);
+				text-transform: uppercase;
+				font-size: 10px;
+				background-color: transparent;
+			}
+			div.errortext {
+				color: red;
+				margin-top: -80px !important;
+				text-align: right;
+				margin-right: 55px;
+				margin-bottom: 145px !important;
+			}
+			div.errortext {
+				text-transform: uppercase;
+				font-size: 11px;
+				letter-spacing: 1px !important;
+				font-weight: 350;
+			}
+		}
+	}
+	.question_status_row {
+		width: 101.5%;
+		height: 70px;
+		display: block;
+		#test_status,
+		#time_countdown {
+			height: 45px;
+			font-size: 13.5px;
+			text-transform: lowercase;
+			font-weight: 400px;
+			letter-spacing: 0.55px;
+			color: $lightblack;
+			border-right: 2px solid borwn;
+			position: relative;
+		}
+		#test_status {
+			width: 800px !important;
+			text-align: right;
+			float: right;
+			position: relative;
+			top: 130px;
+			right: 45px !important;
+			.show_total_quiz {
+				padding: 2px 3px;
+				background-color: gray;
+				font-size: 12px;
+				margin-right: 1.5px;
+				color: white;
+				&:last-child {
+					margin-right: 10px;
+				}
+			}
+			.done {
+				background-color: red;
+			}
+		}
+		#time_countdown {
+			float: left;
+			width: 140px;
+			text-align: center;
+			position: relative;
+			top: 135px;
+			left: 150px;
+		}
+	}
+	.question_containner {
+		position: fixed;
+		width: 100vw;
+		min-height: 50vh !important;
+		height: 70vh !important;
+		display: block;
+		padding: 0px 0px 0px 0px;
+		top: 185px;
+		margin: 0px auto 0px auto;
+		z-index: 1;
+		.question_body {
+			width: 101%;
+			display: block;
+			background-color: transparent;
+			padding: 15px 10px;
+			margin-left: 0px;
+			#language_choices {
+				width: 80px;
+				height: 30px;
+				margin: -55px 0px 0px 30px !important;
+				img {
+					width: 25px;
+					height: 18px;
+				}
+				.thisflag {
+					border: 1px solid white;
+				}
+				.unflag {
+					border: 1px solid white;
+				}
+			}
+			#test {
+				overflow-y: auto !important;
+				overflow-x: hidden !important;
+				position: relative;
+				width: 950px;
+				height: 630px !important;
+				color: black;
+				display: block;
+				margin: -10px auto;
+				top: 10px !important;
+				div.question_pics {
+					width: 45% !important;
+					height: 470px !important;
+					z-index: 55;
+					display: block;
+					padding: 10px;
+					margin: 30px 0px 0px 10px !important;
+					img.q_pics {
+						width: 350px !important;
+						height: 470px !important;
+						justify-content: center;
+					}
+				}
+				.quiz {
+					position: relative;
+					width: 450px;
+					height: 70px;
+					display: block;
+					margin-left: 460px;
+					top: -430px;
+					.question_text {
+						width: 100% !important;
+						height: 100% !important;
+						background-color: coral !important;
+						padding: 25px 0px 0px 5px;
+						text-align: center;
+					}
+				}
+				.answergroup {
+					height: 250px !important;
+					width: 450px !important;
+					display: block;
+					margin-top: -410px !important;
+					margin-left: 460px !important;
+					z-index: 0;
+					input.answer_choice[type=radio] {
+						position: relative;
+						color: black;
+						margin-left: 16px !important;
+						margin-right: 16px !important;
+						margin-top: 20px;
+						margin-bottom: 28px;
+					}
+					.clicked {
+						background-color: red !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+#score {
+	font-size: 25px;
+	color: white;
+	margin-left: 10px;
+}
+
+.showtheanswer {
+	border-top: 1px solid black;
+	padding-top: 6px;
+	color: teal !important;
+	font-weight: 700;
+}
+
+footer {
+	position: sticky !important;
+	width: 100%;
+	height: 120px;
+	background-color: $lightgreen;
+	z-index: 555;
+	margin-top: -1px !important;
+	.next {
+		height: 32px;
+		width: 72px;
+		float: right;
+		background-color: white;
+		margin: 7px 7px 0px 10px !important;
+		font-size: 14px;
+		font-weight: 350;
+		color: $d_blue;
+		letter-spacing: 1.75px;
+		&:hover,
+		&:focus {
+			background-color: coral;
+			color: white;
+			transition: 0.5s;
+		}
+	}
+}
